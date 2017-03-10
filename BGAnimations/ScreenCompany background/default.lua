@@ -17,38 +17,32 @@ t[#t+1] = Def.ActorFrame {
 		LoadActor("konami") .. {
 			OnCommand=cmd(zoomx,1.1;diffusealpha,0;linear,0.5;diffusealpha,1;sleep,5;linear,0.5;diffusealpha,0);
 		};
-		LoadActor("ScreenCompany music.ogg") .. {
-			
+		LoadActor("ScreenCompany music") .. {
+			OnCommand=cmd(play);
+			OffCommand=cmd(stop);
 		};
-
-                LoadActor("bemani") .. {
+		LoadActor("bemani") .. {
 			OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,6;linear,0.5;diffusealpha,1;sleep,5;linear,0.5;diffusealpha,0);
 		};
 		LoadActor("e-amusement") .. {
 			OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,12;linear,0.5;diffusealpha,1;sleep,5;linear,0.5;diffusealpha,0);
 		};
         LoadActor("RSA") .. {
-		OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,18;linear,0.5;diffusealpha,1;sleep,5;linear,0.5;diffusealpha,0);
+			OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,18;linear,0.5;diffusealpha,1;sleep,5;linear,0.5;diffusealpha,0);
         };
-		LoadActor("01staff.png") .. {
-		OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,24;linear,0.25;diffusealpha,1;sleep,1.5;linear,0.25;diffusealpha,0);
+		LoadActor("01staff") .. {
+			OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,24;linear,0.25;diffusealpha,1;sleep,1.5;linear,0.25;diffusealpha,0);
 		};
-		LoadActor("02staff.png") .. {
-		OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,26;linear,0.25;diffusealpha,1;sleep,1.5;linear,0.25;diffusealpha,0);
+		LoadActor("02staff") .. {
+			OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,26;linear,0.25;diffusealpha,1;sleep,1.5;linear,0.25;diffusealpha,0);
 		};
-		LoadActor("03staff.png") .. {
-		OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,28;linear,0.25;diffusealpha,1;sleep,1.5;linear,0.25;diffusealpha,0);
+		LoadActor("03staff") .. {
+			OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,28;linear,0.25;diffusealpha,1;sleep,1.5;linear,0.25;diffusealpha,0);
 		};
-		LoadActor("04staff.png") .. {
-		OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,30;linear,0.25;diffusealpha,1;sleep,1.5;linear,0.25;diffusealpha,0);
-		};	
+		LoadActor("04staff") .. {
+			OnCommand=cmd(zoomx,1.1;diffusealpha,0;sleep,30;linear,0.25;diffusealpha,1;sleep,1.5;linear,0.25;diffusealpha,0);
+		};
 	};
 };
 
-return t
-
-
-	
-
-
-
+return t;
