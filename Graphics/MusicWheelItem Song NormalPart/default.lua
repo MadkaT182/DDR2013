@@ -5,8 +5,8 @@ t[#t+1] = Def.ActorFrame {
 	--InitCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;draworder,1);
 	InitCommand=cmd(x,0;y,101;);
 	Def.Sprite {
-		OnCommand=function (self)
-			local course = GAMESTATE:GetCurrentCourse();
+		SetMessageCommand=function (self, params)
+			local course = params.Course;
 			if GAMESTATE:IsCourseMode() then
 				if course:GetBackgroundPath() then
 					self:Load(course:GetBackgroundPath())
@@ -16,7 +16,7 @@ t[#t+1] = Def.ActorFrame {
 					self:setsize(256,256);
 				end;
 			else
-			local song = GAMESTATE:GetCurrentSong();
+			local song = params.Song;
 				if song then
 					if song:HasJacket() then
 						self:diffusealpha(1);
@@ -24,7 +24,7 @@ t[#t+1] = Def.ActorFrame {
 						self:setsize(256,256);
 					elseif song:HasBackground() then
 						self:diffusealpha(1);
-						self:LoadFromSongBackground(GAMESTATE:GetCurrentSong());
+						self:LoadFromSongBackground(song);
 						self:setsize(256,256);
 					else
 						self:Load(THEME:GetPathG("","Common fallback jacket"));
